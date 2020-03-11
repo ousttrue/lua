@@ -1,41 +1,27 @@
 set(TARGET_NAME lua)
 add_executable(${TARGET_NAME}
-    lvm.c
-    ldo.c
-    lgc.c
-    lcode.c
-    lapi.c
-    linit.c
-    lstring.c
-    lobject.c
-    ltm.c
-    lzio.c
     lstate.c
-    ltable.c
-    lopcodes.c
+    lapi.c
+    ltm.c
+    lmem.c
+    ldo.c
+    lfunc.c
+    lgc.c
     llex.c
-    ltests.c
-    lctype.c
+    lstring.c
+    ltable.c
+    lobject.c
+    lzio.c
     ldebug.c
     ldump.c
-    lmem.c
-    lundump.c
+    lvm.c
     lparser.c
-    lfunc.c
+    lundump.c
+    lctype.c
+    lopcodes.c
+    lcode.c
     #
-    ldblib.c
-    loslib.c
-    loadlib.c
-    lmathlib.c
-    lauxlib.c
-    lbaselib.c
-    lcorolib.c
-    ltablib.c
-    liolib.c
-    lstrlib.c
-    lbitlib.c
-    #
-    lua.c
+    main.cpp
     )
     target_compile_definitions(${TARGET_NAME} PRIVATE
     _CRT_SECURE_NO_WARNINGS
